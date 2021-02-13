@@ -1,0 +1,105 @@
+{
+  "ignorePatterns": [
+    "node_modules",
+    ".eslintrc.*",
+    "**/dist/**"
+  ],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "ignoreUrls": true,
+        "code": 80
+      }
+    ],
+    "prefer-template": "off",
+    "indent": [
+      "error",
+      2
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+    "no-var": "error",
+    "one-var": [
+      "error",
+      "never"
+    ],
+    "camelcase": "error",
+    "no-multi-assign": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "no-array-constructor": "error",
+    "no-new-object": "error",
+    "no-new-wrappers": "error",
+    "no-nested-ternary": "error",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "error"
+        ]
+      }
+    ],
+    "no-template-curly-in-string": "error",
+    "no-self-compare": "error",
+    "func-names": [
+      "error",
+      "as-needed"
+    ],
+    "semi": [
+      2,
+      "always"
+    ],
+    "no-shadow": "off",
+    "no-redeclare": "off",
+    "no-undef": "off",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "warn",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": false,
+        "optionalDependencies": true,
+        "peerDependencies": true,
+        "bundledDependencies": true
+      }
+    ],
+    "import/no-unresolved": "off",
+    "no-unused-expressions": "off"
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    "prettier",
+    "plugin:vue/vue3-essential"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "prettier"
+  ],
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}

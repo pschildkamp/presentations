@@ -1,0 +1,39 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "bundled": true,
+  "dependencies": {
+    "reveal.js": "^4.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/cross-env NODE_ENV=development webpack serve --config ../../bundler/webpack.dev.js --env context=presentations/boilerplate/",
+    "build": "./node_modules/.bin/cross-env NODE_ENV=production webpack --config ../../bundler/webpack.prod.js --env context=presentations/boilerplate/",
+    "lint": "eslint ./src",
+    "clean": "rm -rf ./dist"
+  },
+  "config": {
+    "presentation": {
+      "title": "Boilerplate",
+      "description": "This presentation is only a boilerplate. Nothing to see here."
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "files": [
+    "dist"
+  ]
+}
